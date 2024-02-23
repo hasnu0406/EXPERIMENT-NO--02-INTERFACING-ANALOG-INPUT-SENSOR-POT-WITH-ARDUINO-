@@ -67,6 +67,7 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
+```
 int pot;
 int led=7;
 void setup()
@@ -92,6 +93,7 @@ void loop()
      delay(500);
     }
   }
+ ```
 
 FIGURE 1: SERIAL MONITOR AND GRAPH:
 ![GRAPH](https://github.com/hasnu0406/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/135305537/abbf611f-7318-40db-8919-a0644adba7c0)
