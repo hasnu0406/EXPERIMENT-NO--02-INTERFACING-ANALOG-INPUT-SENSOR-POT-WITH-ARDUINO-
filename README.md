@@ -1,8 +1,8 @@
  INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
-
-
-
-
+ ### DATE:23-02-2024
+ ### NAME:HASNA MUBARAK AZEEM
+ ### REG.NO:212223240052
+ ### DEPT.:AIML
 **AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
 
 
@@ -67,8 +67,36 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+''' 
+int pot;
+int led=7;
+void setup()
+{
+  pinMode(led,OUTPUT);
+  Serial.begin(9600);
+}
 
+void loop()
+{
+  pot=analogRead(A0);
+  //Serial.print("Value=");
+  Serial.println(pot);
+  if(pot>900)
+  {
+  digitalWrite(led, HIGH);
+  delay(500); 
+  digitalWrite(led, LOW);
+  delay(500);
+  }
+    else
+    {digitalWrite(led, LOW);
+     delay(500);
+    }
+  }
+  '''
+
+FIGURE 1: SERIAL MONITOR AND GRAPH:
+![GRAPH](https://github.com/hasnu0406/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/135305537/abbf611f-7318-40db-8919-a0644adba7c0)
 
 
 
@@ -79,6 +107,15 @@ CIRCUIT DIAGRAM
 
 **
 **Simulation output:** 
+FIGURE 1: SIMULATION 1 :OFF CONDITION:
+![OFF](https://github.com/hasnu0406/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/135305537/d95f4821-3a92-4cb3-b4ab-01b0a206fe6f)
+
+FIGURE 2: SIMULATION 2 :ON CONDITION:
+![ON](https://github.com/hasnu0406/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/135305537/5c24a6d4-2f3c-4ec8-b136-59ceab31a640)
+
+FIGURE 3:SCIMATIC VIEW DIAGRAM:
+![Screenshot 2024-02-23 160611](https://github.com/hasnu0406/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/135305537/afda5ca1-9fde-4de9-a21c-6f75e8e1c4bb)
+
 **
 
 
